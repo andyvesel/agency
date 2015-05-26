@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  added: 2015-05-26 13:12:02
+  expiration: 2015-05-26 13:12:02
+  salary: 1
+  contacts: MyText
+
+two:
+  title: MyString
+  added: 2015-05-26 13:12:02
+  expiration: 2015-05-26 13:12:02
+  salary: 1
+  contacts: MyText
