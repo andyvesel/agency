@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'employees/index'
+
   resources :employees do
     resources :skills
   end
