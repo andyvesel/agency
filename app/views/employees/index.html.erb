@@ -1,2 +1,26 @@
-<h1>Employees#index</h1>
-<p>Find me in app/views/employees/index.html.erb</p>
+<h2>Employees</h2>
+
+<p><%= link_to 'Add new employee', new_employee_path %></p>
+	<table class="table table-bordered">
+	 	<thead>
+	 		<td><strong>Name</strong></td>
+	 		<td><strong>Contacts</strong></td>
+	 		<td><strong>Avaliable for job</strong></td>
+	 		<td><strong>Money rate</strong></td>
+	 		<td><strong>Skills</strong></td>
+	 	</thead>
+		<% @employees.each do |employee| %>
+	 	<tbody>
+				<td><%= employee.name %></td>
+				<td><%= employee.contact %></td>
+				<td>
+					<% if employee.search == true %>
+							Avaliable
+						<% else %>
+							Busy
+					<% end %>
+				</td>
+				<td><%= employee.salary %></td>
+		</tbody>
+<% end %>
+</table>
