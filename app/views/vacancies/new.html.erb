@@ -1,0 +1,31 @@
+<h3>New vacancy</h3>
+<%= form_for :vacancy, url: vacancies_path do |f| %>
+	<p>
+		<label>Title</label><br />
+		<%= f.text_field :title %>
+	</p>
+
+	<p>
+		<label>Add date</label><br />
+		<%= f.text_area :added %>
+	</p>
+
+	<p>
+		<label>Expiration</label><br />
+		<%= f.text_area :expiration %>
+	</p>
+
+	<p>
+		<label>Salary</label><br />
+		<%= f.text_area :salary %>
+	</p>
+	
+	<p>
+		<label>Contacts</label><br />
+		<%= f.text_area :contacts %>
+	</p>
+
+	<p>
+		<%= f.submit %>
+	</p></p>
+<% end %>
