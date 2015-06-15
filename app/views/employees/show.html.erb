@@ -23,10 +23,18 @@
 	<%= link_to 'Edit', edit_employee_path%> | 
 	<%= link_to 'Back', employees_path %>
 </p>
+
 <hr />
+<h4>Skills</h4>
+<% @employee.skills.each do |skill| %>
+<p>
+	<%= skill.title %>
+<% end %>
+
+<hr/>
+
 <h4>Add skill</h4>
 
 <%= form_for([@employee, @employee.skills.build]) do |f| %>
-	<%= f.label :title %><br />
 	<%= f.text_field :title %>
 <% end %>
