@@ -1,0 +1,25 @@
+<h2><%= @employee.name %></h2>
+		
+<p>
+	<label>Contacts</label><br />
+	<%= @employee.contact %>
+</p>
+
+<p>
+	<label>Avaliable for job</label><br />
+	<% if @employee.search == true %>
+		Avaliable
+	<% else %>
+		Busy
+	<% end %>
+</p>
+
+<p>
+	<label>Money rate</label><br />
+	<%= @employee.salary %>
+</p>
+
+<p>
+	<%= link_to 'Edit', edit_employee_path%> | 
+	<%= link_to 'Back', employees_path %>
+</p>
