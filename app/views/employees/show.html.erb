@@ -1,5 +1,5 @@
 <h2><%= @employee.name %></h2>
-		
+<hr />		
 <p>
 	<label>Contacts</label><br />
 	<%= @employee.contact %>
@@ -23,3 +23,10 @@
 	<%= link_to 'Edit', edit_employee_path%> | 
 	<%= link_to 'Back', employees_path %>
 </p>
+<hr />
+<h4>Add skill</h4>
+
+<%= form_for([@employee, @employee.skills.build]) do |f| %>
+	<%= f.label :title %><br />
+	<%= f.text_field :title %>
+<% end %>
